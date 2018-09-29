@@ -1,0 +1,60 @@
+conta form ----------------------------------------------------
+<div class="container">
+				<div class="row">
+					<div class="col-12">
+							<div class="warp-heading">
+						<h2>Contact Me</h2>	
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<form>
+							<div id="flash"></div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="name">Name</label>
+										<input type="text" class="form-control" minlength="3" id="name" placeholder="Enter name" required>
+									</div>
+									<div class="form-group">
+										<label for="email">Email</label>
+										<input type="email" class="form-control" id="email" placeholder="Enter email" required>
+									</div>
+									<div class="form-group">
+										<button type="submit" class="btn btn-primary">Submit</button>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="phone">Phone</label>
+										<input type="number" class="form-control" maxlength="15" id="phone" placeholder="Enter phone" required>
+									</div>
+									<div class="form-group">
+										<label for="message">Message</label>
+										<textarea class="form-control" id="message" rows="3" placeholder="Enter message" required></textarea>
+									</div>
+								</div>
+							</div>
+						</form>	
+					</div>
+				</div>
+			</div>
+
+
+what I do -----------------------------------------------------------------
+<div class="col-md-3">
+						<div class="what-we-do">
+							<h3>Web Design</h3>
+							<i class="fas fa-magic"></i>
+						<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat</p>
+						<ul class="list-group">
+							<li class="list-group-item">Cras justo odio</li>
+							<li class="list-group-item">Dapibus ac facilisis in</li>
+							<li class="list-group-item">Morbi leo risus</li>
+							<li class="list-group-item">Porta ac consectetur ac</li>
+							<li class="list-group-item">Vestibulum at eros</li>
+						  </ul>	
+						</div>
+						
+					</div>
