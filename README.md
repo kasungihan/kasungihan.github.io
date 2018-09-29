@@ -16,23 +16,23 @@
  - Blog
 
  - skill
-	html
-	css
-	javascript
-	service page 
+	- html
+	- css
+	- javascript
+	- service page 
 
  - portflio page
-	my work
+	- my work
 
  - contact me
-	contact from
-	social media button
+	- contact from
+	- social media button
 
  - Tools I Use
 
  - footer
-	my signture	animation splitext
-	socail media links
+	- my signture	animation splitext
+	- socail media links
 	
-	http://codeview.ml/
+	https://kasungihan.github.io/
 
