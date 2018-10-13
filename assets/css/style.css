@@ -21,6 +21,9 @@ section:first-child {
     padding-top: inherit;
     margin-top: inherit;
 }
+/*=================================== 
+    footer custom style
+=====================================*/
 .footer-widget ul#social {
     text-decoration: none;
 }
@@ -30,3 +33,7 @@ section:first-child {
 .footer-widget ul#social li a svg {
     font-size: 30px;
 }
+
+/*=================================== 
+    owl carousal custom style
+=====================================*/

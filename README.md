@@ -2,7 +2,7 @@
 
 ## web developer portfolios
 
-<p align="center"><img src="images/logo.svg" width="300">
+<p align="center"><img src="assets/images/logo.jpg" width="300">
 
 # component of my website,
 
