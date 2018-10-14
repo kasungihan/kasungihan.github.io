@@ -1,3 +1,6 @@
+
+canvas { width: 100%; height: 100% }
+
 h2 {
     font-family: 'Russo One', sans-serif;
 }
@@ -46,8 +49,25 @@ section:first-child {
     text-transform: uppercase;
 }
 /*=================================== 
+    what i do section custom style
+=====================================*/
+.what-we-do {
+   text-align: center;
+}
+.what-we-do .icon {
+   text-align: center;
+    font-size: 35px;
+}
+.what-we-do p {
+    text-align: justify;
+}
+
+/*=================================== 
     footer custom style
 =====================================*/
+footer {
+    padding-top: 50px;
+}
 .footer-widget p {
     font-size: 13px;
 }
