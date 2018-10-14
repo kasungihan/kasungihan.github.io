@@ -9,21 +9,48 @@ p {
 }
 .warp-heading {
     text-align: center;
+    padding-bottom: 40px;
 }
 .warp-heading h2 {
     text-transform: capitalize;
 }
 section {
-    padding-top: 10px;
-    margin-top: 10px;
+    padding-top: 6vh;
+    margin-top: 6vh;
 }
 section:first-child {
     padding-top: inherit;
     margin-top: inherit;
 }
 /*=================================== 
+    about section custom style
+=====================================*/
+.about-featured {
+    position: relative;
+    /* display: flex;
+    justify-content: center; */
+}
+.about-featured img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+}
+.about-box .warp-heading {
+    padding-top: 40px;
+}
+/*=================================== 
+    skill section custom style
+=====================================*/
+.warp-progress label {
+    text-transform: uppercase;
+}
+/*=================================== 
     footer custom style
 =====================================*/
+.footer-widget p {
+    font-size: 13px;
+}
 .footer-widget ul#social {
     text-decoration: none;
 }
@@ -37,3 +64,6 @@ section:first-child {
 /*=================================== 
     owl carousal custom style
 =====================================*/
+/* .owl-carousel .owl-item {
+    width: 200px !important;
+} */
