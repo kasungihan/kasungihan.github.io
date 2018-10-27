@@ -7,8 +7,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Kasun Gihan | Web Development &amp; Design</title>
-        <meta name="description" content="content for website">
-        <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+        <meta name="description" content="I'm a full-stack web developer in Borella, Sri Lanka. I work as a freelance web developer. Probably I'm looking for some inspiration to design a website and with a modern look. I always learn new things about the web development technologies.">
+        <meta name="keywords" content="kasun,kasungihan,web development,web design,sri lanka">
         <meta name="author" content="Kasun Gihan">
         <meta name="robots" content="index, follow">
         <meta name="googlebot" content="index, follow" />
@@ -17,20 +17,26 @@
         <!-- meta generate https://megatags.co/ -->
         <!-- Schema.org for Google / Google+ - get info from https://developers.google.com/+/web/snippet/ -->
         <meta itemprop="name" content="Kasun Gihan | Web Development &amp; Design">
-        <meta itemprop="description" content="code here">
-        <meta itemprop="image" content="http://domain.com/assets/images/share.jpg">
+        <meta itemprop="description" content="I'm a full-stack web developer in Borella, Sri Lanka. I work as a freelance web developer. Probably I'm looking for some inspiration to design a website and with a modern look. I always learn new things about the web development technologies.">
+		<meta itemprop="image" content="https://kasungihan.github.io/assets/images/share.jpg">
+		
+		<!-- Geo Metas -->
+		<meta name="DC.title" content="Kasun Gihan | Web Development &amp; Design" />
+		<meta name="geo.region" content="LK-08" />
+		<meta name="geo.placename" content="Colombo" />
+		<meta name="geo.position" content="6.923453;79.880242" />
+		<meta name="ICBM" content="6.923453, 79.880242" />
 
         <!-- Twitter -->
         <meta name="twitter:card" content="summary">
         <meta name="twitter:title" content="Kasun Gihan | Web Development &amp; Design">
-        <meta name="twitter:description" content="code here">
+        <meta name="twitter:description" content="I'm a full-stack web developer in Borella, Sri Lanka. I work as a freelance web developer. Probably I'm looking for some inspiration to design a website and with a modern look. I always learn new things about the web development technologies.">
 
         <!-- Facebook - get info from http://ogp.me/ -->
         <meta property="og:title" content="Kasun Gihan | Web Development &amp; Design" />
-        <meta name="og:description" content="code here">
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://www.website.com" />
-        <meta property="og:image" content="http://domain.com/assets/images/share.jpg" />
+        <meta name="og:description" content="I'm a full-stack web developer in Borella, Sri Lanka. I work as a freelance web developer. Probably I'm looking for some inspiration to design a website and with a modern look. I always learn new things about the web development technologies.">
+        <meta property="og:url" content="https://kasungihan.github.io/" />
+        <meta property="og:image" content="https://kasungihan.github.io/assets/images/share.jpg" />
 
         <!-- generate favicon form https://www.favicon-generator.org/ -->
         <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
@@ -53,18 +59,47 @@
         <meta name="msapplication-TileImage" content="assets/images/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
 
-		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Russo+One|Kanit|Montserrat">
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
 		<link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
         <link rel="stylesheet" href="assets/css/style.css">
 		
-        <!-- google analytics -->
-		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128204151-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-128204151-1');
+		</script>
         <!-- ./google analytics -->
         
         <!-- schema json -->
-		
+		<script type="application/ld+json">
+		{
+			"@context": "http://schema.org/",
+			"@type": "Person",
+			"name": "Kasun Gihan",
+			"alternateName": "kasungihan",
+			"url": "https://kasungihan.github.io/",
+			"image": "https://kasungihan.github.io/assets/images/share.jpg",
+			"sameAs": [
+			"https://www.facebook.com/kasun.gihan.58",
+			"https://twitter.com/Gihan58Kasun",
+			"https://plus.google.com/u/0/100619195461700305619",
+			"https://www.instagram.com/kasun.gihan58/",
+			"https://www.linkedin.com/in/kasun-gihan/",
+			"https://github.com/kasungihan"
+			],
+			"jobTitle": "web development",
+			"worksFor": {
+			"@type": "Organization",
+			"name": "CodeView"
+			}  
+		}
+		</script>
         <!-- ./schema json -->
   </head>
   <body>
@@ -122,7 +157,7 @@
 								<h2>About Me</h2>
 							</div>
 							<p>Hello, I'm Kasun Gihan,<br>
-								I'm a full-stack web developer for work as a freelance developer in Sri Lanka, Borella I inspire looking for the new modern website and also I want to make things that make a difference below are a few services I provide</p>
+								I'm a full-stack web developer in Borella, Sri Lanka. I work as a freelance web developer. I inspire looking for the new modern website and also I want to make things that make a difference below are a few services I provide</p>
 						</div>
 					</div>
 				</div>
@@ -456,19 +491,23 @@
 	</script>
 	<script>
 		var scene = new THREE.Scene();
+		var color = new THREE.Color( 'skyblue' );
+		scene.background = color;
+		scene.fog = new THREE.Fog( 0x000000, 250, 1400 );
+		//console.log(scene);
 		var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
 
 		var renderer = new THREE.WebGLRenderer();
 		renderer.setSize( window.innerWidth, window.innerHeight );
 		document.getElementById('cover-box').appendChild( renderer.domElement )
 
-		var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+		 var geometry = new THREE.BoxGeometry( 1, 1, 1 );
 		var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 		var cube = new THREE.Mesh( geometry, material );
 		scene.add( cube );
 
-		camera.position.z = 5;
-
+		
+		
 		var animate = function () {
 			requestAnimationFrame( animate );
 
@@ -479,6 +518,39 @@
 		};
 
 		animate();
+		
+		/* camera.position.z = 5;
+		group = new THREE.Group();
+
+		var loader = new THREE.FontLoader();
+		//var text = "Kasun Gihan";
+		loader.load( 'node_modules/three/examples/fonts/helvetiker_regular.typeface.json', function ( font ) {
+		var	textGeo = new THREE.TextGeometry('Kasun Gihan', {
+			font: font,
+			size: 80,
+			height: 5,
+			curveSegments: 12,
+			bevelEnabled: true,
+			bevelThickness: 10,
+			bevelSize: 8,
+			bevelSegments: 5});
+
+			textGeo.computeBoundingBox();
+				textGeo.computeVertexNormals();
+
+
+var material = new THREE.MeshPhongMaterial( { color: 0xffffff } ) ;
+textGeo = new THREE.BufferGeometry().fromGeometry( textGeo );
+var textMesh1 = new THREE.Mesh( textGeo, material );
+group.add( textMesh1 );
+
+scene.add( group );
+renderer.render( scene, camera );
+		}); */
+
+
+
 	</script>
+	
   </body>
 </html>
