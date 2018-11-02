@@ -4,21 +4,34 @@ var KASUN = KASUN || {};
 
 (function($, win, doc){
 
-    "use strict";
+	"use strict";
+	
+	var $window = $(win);
+    var $document = $(doc);
+	var $body = $('body');
+	var $html = $('html');
+	var $goTop = $('#go-top');
+	var $coverBox = $('#cover-box');
+	var $tools = $('#tools');
 
     KASUN.initialize = {
 
 		init: function(){
 
-			/* SEMICOLON.initialize.responsiveClasses();
-			SEMICOLON.initialize.imagePreload( '.portfolio-item:not(:has(.fslider)) img' );
+			KASUN.initialize.responsiveClasses();
+			KASUN.initialize.lazyLoad();
+			KASUN.initialize.detectPlatform();
+			KASUN.initialize.detectTouch();
+			KASUN.initialize.goToTop();
+			KASUN.initialize.imageFade();
+			KASUN.initialize.scrollBar();
+			KASUN.initialize.landSection();
+			/* SEMICOLON.initialize.imagePreload( '.portfolio-item:not(:has(.fslider)) img' );
 			SEMICOLON.initialize.stickyElements();
-			SEMICOLON.initialize.goToTop();
 			SEMICOLON.initialize.fullScreen();
 			SEMICOLON.initialize.verticalMiddle();
 			SEMICOLON.initialize.lightbox();
 			SEMICOLON.initialize.resizeVideos();
-			SEMICOLON.initialize.imageFade();
 			SEMICOLON.initialize.pageTransition();
 			SEMICOLON.initialize.dataResponsiveClasses();
 			SEMICOLON.initialize.dataResponsiveHeights(); */
@@ -27,6 +40,7 @@ var KASUN = KASUN || {};
 		},
 
 		responsiveClasses: function(){
+			if ("undefined" == typeof jRespond) return console.log("responsiveClasses: jRespond plugin is missing."), !0;//!0 = true !1 = false
 			var jRes = jRespond([
 				{
 					label: 'smallest',
@@ -75,6 +89,45 @@ var KASUN = KASUN || {};
 			]);
 		},
 
+		detectTouch: function(){
+			if (!("ontouchstart" in doc.documentElement)) {
+				$html.addClass("no-touch");
+			} 
+		},
+
+		detectPlatform: function(){
+			/* --------------------------------------------------
+			Detect Platform
+			---------------------------------------------------- */  
+			var isMobile = {
+				Android: function() {
+					return navigator.userAgent.match(/Android/i);
+				},
+				BlackBerry: function() {
+					return navigator.userAgent.match(/BlackBerry/i);
+				},
+				iOS: function() {
+					return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+				},
+				Opera: function() {
+					return navigator.userAgent.match(/Opera Mini/i);
+				},
+				Windows: function() {
+					return navigator.userAgent.match(/IEMobile/i);
+				},
+				any: function() {
+					return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+				}
+			};
+			if(!isMobile.any())
+			{
+				$html.addClass("no-mobile");
+			}
+			else {
+				$html.addClass("mobile");
+			}
+		},
+
 		imagePreload: function(selector, parameters){
 			/* var params = {
 				delay: 250,
@@ -98,7 +151,30 @@ var KASUN = KASUN || {};
 		},
 
 		goToTop: function(){
+			$window.on('scroll', function(){
+				let scroll = $window.scrollTop();//.topScrollOffset;
+				let offset = $coverBox.outerHeight();
+				if(scroll >= offset){
+					$goTop.addClass('d-block');
+					//console.log('offset');
+				} else{
+					$goTop.removeClass('d-block');
+					//console.log('offset no');
+				}
+			});
 			
+			 $goTop.on('click', function() {
+				TweenMax.to($window, 2, { scrollTo:'body', ease:Power3.easeOut});
+			  });
+	
+			  /*var winHieght = $(window).height();
+			  var goBackTop = new TimelineMax();
+			  var goTopAnimate = goBackTop.staggerFrom($('.help-button'), 0.8, {x: 50, ease:Power4.easeInOut})
+				  .from($('.goto-top'), 0.8, {y: 60, ease: Power3.easeInOut});
+	
+			  var goTop = new ScrollMagic.Scene({ triggerElement: 'body', offset: winHieght})
+				.setTween(goTopAnimate)
+				.addTo(controller); */
 		},
 
 		modal: function(){
@@ -106,11 +182,13 @@ var KASUN = KASUN || {};
 		},
 
 		imageFade: function(){
-			/* $('.image_fade').hover( function(){
-				$(this).filter(':not(:animated)').animate({opacity: 0.8}, 400);
+			$('.image_fade').hover( function(){
+				TweenMax.set($(this),{opacity:0.8});
+				//$(this).filter(':not(:animated)').animate({opacity: 0.8}, 400);
 			}, function() {
-				$(this).animate({opacity: 1}, 400);
-			}); */
+				//$(this).animate({opacity: 1}, 400);
+				TweenMax.to($(this),3, {opacity:1});
+			});
 		},
 
 		preLoader: function(){
@@ -118,7 +196,7 @@ var KASUN = KASUN || {};
 		},
 
 		lazyLoad: function() {
-			var lazyLoadEl = $('[data-lazyload]');
+			/* var lazyLoadEl = $('[data-lazyload]');
 			if( lazyLoadEl.length > 0 ) {
 				lazyLoadEl.each( function(){
 					var element = $(this),
@@ -128,15 +206,121 @@ var KASUN = KASUN || {};
 						element.attr('src', elementImg);
 					},{accX: 0, accY: 120},'easeInCubic');
 				});
-			}
+			} */
+			/* if($body.has('device-lg')){
+
+			} else if($body.has('device-sm')){
+
+			} else if($body.has('device-md')){
+
+			} else if($body.has('device-xs')){
+
+			} else {
+				
+			} */
+			var myLazyLoad = new LazyLoad({
+				elements_selector: ".lazy",
+				//load_delay: 300 //adjust according to use case
+			});
 		},
 
-		topScrollOffset: function() {
+		landSection: function() {
+			//if ("undefined" == typeof ScrollMagic) return console.log("landSection: ScrollMagic plugin is missing."), !0;
+			  //var controller = new ScrollMagic.Controller();
+			  /* $document.on('click', 'a[href^="#"]', function (event) {
+				event.preventDefault();
 			
+				$('html, body').animate({
+					scrollTop: $($.attr(this, 'href')).offset().top
+				}, 5000);
+				
+			}); */ 
+			
+			/* $window.bind( 'hashchange', function(e) {
+				console.log('location');
+			}); */
+			$('a[href^="#"]').on('click', function(e) {
+				e.preventDefault();
+				var href = $.attr(this, 'href');
+				TweenMax.to($window, 1.5, { scrollTo: href, ease:Power4.easeOut, onComplete: hashCallback });
+				function hashCallback() {
+					win.location.hash = href;
+				}
+				/* $body.animate({
+					scroll: $(href).offset().top
+				}, 5000, function () {
+					win.location.hash = href;
+				}); */
+
+				//return false; //this event click and then html and js default function not run same things event.preventDefault();
+			});
 		},
 
-		defineColumns: function(  ){
+		scrollBar: function( ){
+			if (!$document.niceScroll) return console.log("scrollBar: niceScroll plugin is missing."), !0;
+			$body.niceScroll();
+		}
+
+	};
+
+	KASUN.section = {
+		init: function(){
+			KASUN.section.tool();
+		},
+		slider: function(){
 			
+		},
+		about: function(){
+			
+		},
+		skill: function(){
+			
+		},
+		work: function(){
+			
+		},
+		service: function(){
+
+		},
+		tool: function(){
+			if (!$document.owlCarousel) return console.log("tool: owl Carousel plugin is missing."), !0;
+			$tools.owlCarousel({
+				margin:20,
+				autoplay:true,
+				loop:true,
+				//lazyLoad:true,
+				//autoWidth:true,
+				items:5,
+				nav: false,
+				dots: false,
+				responsive:{
+					0:{
+						items:1,
+						nav:true
+					},
+					600:{
+						items:3,
+						nav:false
+					},
+					1000:{
+						items:5,
+						nav:false
+					}
+				}
+			});
+		}
+	};
+
+	KASUN.widget = {
+
+		init: function(){
+
+		},
+		signatureAnimate: function(){
+
+		},
+		socialBottonAnimate: function() {
+
 		}
 
 	};
@@ -157,17 +341,18 @@ var KASUN = KASUN || {};
 	KASUN.documentOnReady = {
 
 		init: function(){
-            console.log('documentOnReady')
+			KASUN.initialize.init();
+			KASUN.section.init();
 		},
 
 		windowscroll: function(){
 
 			
 
-			$window.on( 'scroll', function(){
+			/* $window.on( 'scroll', function(){
                 console.log('scroll')
 
-			});
+			}); */
 
 			//window.addEventListener('scroll', onScrollSliderParallax, false);
 
@@ -179,18 +364,15 @@ var KASUN = KASUN || {};
 	KASUN.documentOnLoad = {
 
 		init: function(){
-			console.log('document')
+			console.log('documentOnLoad')
 		}
 
     };
     
-    var $window = $(win);
-    var $document = $(doc);
+    
 
     $document.ready( KASUN.documentOnReady.init );
 	$window.on('load', KASUN.documentOnLoad.init );
     $window.on( 'resize', KASUN.documentOnResize.init );
     
 })(jQuery, window, document);
-
-console.log(KASUN);

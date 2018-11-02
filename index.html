@@ -67,13 +67,13 @@
 		
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128204151-1"></script>
-		<script>
+		<!-- <script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 
 		gtag('config', 'UA-128204151-1');
-		</script>
+		</script> -->
         <!-- ./google analytics -->
         
         <!-- schema json -->
@@ -118,22 +118,22 @@
 		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		    <ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="#cover-box">Home <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">About</a>
+					<a class="nav-link" href="#about">About</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Skill</a>
+					<a class="nav-link" href="#skill">Skills</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">My work</a>
+					<a class="nav-link" href="#mywork">My work</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="https://medium.com/@kasungihan.dev" target="_blank">Blog</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Contact</a>
+					<a class="nav-link" href="#contact">Contact</a>
 				</li>
 		    </ul>
 		  </div>
@@ -142,13 +142,13 @@
 
 	<main>
 		<section id="cover-box"></section>
-		<section>
+		<section id="about">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
 						<div class="about-featured">
 
-							<img src="assets/images/about/kasun.jpg" alt="Kasun Gihan" style="max-width: 100%;">
+							<img data-src="assets/images/about/kasun.jpg" class="lazy image_fade" alt="Kasun Gihan" style="max-width: 100%;">
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -163,7 +163,7 @@
 				</div>
 			</div>
 		</section>
-		<section>
+		<section id="skill">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
@@ -264,7 +264,7 @@
 				</div>
 			</div>
 		</section>
-		<section>
+		<section id="mywork">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
@@ -279,7 +279,7 @@
 							<img class="card-img-top" src="assets/images/work/mrcook.jpg" alt="Mr.Cook">
 							<div class="card-body">
 								<h5 class="card-title">Mr.cook</h5>
-								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								<!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
 								<a href="#" class="btn btn-primary">Go to the website</a>
 							</div>
 						</div>	
@@ -289,7 +289,7 @@
 							<img class="card-img-top" src="assets/images/work/fbapp-mrcook.jpg" alt="Amused App">
 							<div class="card-body">
 								<h5 class="card-title">Amused App</h5>
-								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								<!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
 								<a href="#" class="btn btn-primary">Go to the website</a>
 							</div>
 						</div>	
@@ -323,7 +323,7 @@
 								<i class="fas fa-magic"></i>
 							</div>
 							<h3>Websites</h3>
-						<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat</p>
+						<p>the website is a showcase the depth of information, nowadays most people find information on the internet to go to the website. I can create a smooth animation with clear a website, that helps you to show others</p>
 						
 						</div>
 						
@@ -362,7 +362,7 @@
 				</div>
 			</div>
 		</section>
-		<section>
+		<section id="contact">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
@@ -373,24 +373,24 @@
 				</div>
 				<div class="row">
 					<div class="col-md-12">
-						<div class="owl-carousel owl-theme">
+						<div id="tools" class="owl-carousel owl-theme">
 							<a href="#" style="width:150px" target="_blank">
-								<img src="assets/images/tools/vscode.png" width="200" alt="VS Code">
+								<img src="assets/images/tools/vscode.png" class="image_fade" width="200" alt="VS Code">
 							</a>
 							<a href="#" style="width:150px" target="_blank">
-								<img src="assets/images/tools/git.png" width="200" alt="Git">
+								<img src="assets/images/tools/git.png" class="image_fade" width="200" alt="Git">
 							</a>
 							<a href="#" style="width:150px" target="_blank">
-								<img src="assets/images/tools/webpack.png" width="200" alt="Webpack">
+								<img src="assets/images/tools/webpack.png" class="image_fade" width="200" alt="Webpack">
 							</a>
 							<a href="#" style="width:150px" target="_blank">
-								<img src="assets/images/tools/virtualbox.png" width="200" alt="Virtual Box">
+								<img src="assets/images/tools/virtualbox.png" class="image_fade" width="200" alt="Virtual Box">
 							</a>
 							<a href="#" style="width:150px" target="_blank">
-								<img src="assets/images/tools/filezilla.png" width="200" alt="FileZilla">
+								<img src="assets/images/tools/filezilla.png" class="image_fade" width="200" alt="FileZilla">
 							</a>
 							<a href="#" style="width:150px" target="_blank">
-								<img src="assets/images/tools/chrome.png" width="200" alt="Chrome">
+								<img src="assets/images/tools/chrome.png" class="image_fade" width="200" alt="Chrome">
 							</a>
 						</div>
 					</div>
@@ -450,55 +450,51 @@
 			</div>
 		</div>
 	</footer>
-	<script src="node_modules/jquery/dist/jquery.slim.js"></script>
+	<div id="go-top">
+		<i class="fas fa-arrow-up"></i>
+	</div>
+	<script src="node_modules/jquery/dist/jquery.js"></script>
 	<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="node_modules/jrespond/js/jRespond.js"></script>
 	<script src="node_modules/jquery.nicescroll/dist/jquery.nicescroll.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@8.17.0/dist/lazyload.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/ScrollToPlugin.min.js"></script>
 	<script src="node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
 	<script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
 	<script src="node_modules/three/three.js"></script>
 	<script src="assets/js/main.js" async defer></script>
 	<script>
-	$(function() {  
-		$("body").niceScroll();
-	});
-	</script>
-	<script>
-		$(document).ready(function(){
-			$('.owl-carousel').owlCarousel({
-				margin:20,
-				autoplay:true,
-				loop:true,
-				//autoWidth:true,
-				items:5,
-				nav: false,
-				dots: false,
-				responsive:{
-					0:{
-						items:1,
-						nav:true
-					},
-					600:{
-						items:3,
-						nav:false
-					},
-					1000:{
-						items:5,
-						nav:false
-					}
-				}
-			});
-		});
-	</script>
-	<script>
 		var scene = new THREE.Scene();
-		var color = new THREE.Color( 'skyblue' );
-		scene.background = color;
-		scene.fog = new THREE.Fog( 0x000000, 250, 1400 );
-		//console.log(scene);
-		var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
-
+		//var color = new THREE.Color( 0x000000 );
+		//var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
 		var renderer = new THREE.WebGLRenderer();
+		//renderer.setClearColorHex( 0xffffff, 1 );
 		renderer.setSize( window.innerWidth, window.innerHeight );
+		//scene.background = color;
+		document.getElementById('cover-box').appendChild( renderer.domElement );
+
+		var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 5000 );
+		camera.position.set( 0, 0, 100 );
+		camera.lookAt( 0, 0, 0 );
+
+		var material = new THREE.LineBasicMaterial( { color: 0x0000ff } );
+
+		var geometry = new THREE.Geometry();
+		geometry.vertices.push(new THREE.Vector3( -10, 0, 0) );
+		geometry.vertices.push(new THREE.Vector3( 0, 10, 0) );
+		geometry.vertices.push(new THREE.Vector3( 10, 0, 0) );
+
+		var line = new THREE.Line( geometry, material );
+
+		scene.add( line );
+		renderer.render( scene, camera );
+		
+		
+		/* scene.fog = new THREE.Fog( 0x000000, 250, 1400 );
+		//console.log(scene);
+
 		document.getElementById('cover-box').appendChild( renderer.domElement )
 
 		 var geometry = new THREE.BoxGeometry( 1, 1, 1 );
@@ -517,7 +513,7 @@
 			renderer.render( scene, camera );
 		};
 
-		animate();
+		animate(); */
 		
 		/* camera.position.z = 5;
 		group = new THREE.Group();
