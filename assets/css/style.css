@@ -117,6 +117,11 @@ footer {
 .footer-widget ul#social li a svg {
     font-size: 30px;
 }
+.copy-right {
+    font-family: "Archivo Narrow";
+    text-transform: uppercase;
+    font-size: 12px;
+}
 
 /*=================================== 
     owl carousal custom style

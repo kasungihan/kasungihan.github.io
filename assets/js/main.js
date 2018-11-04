@@ -13,6 +13,8 @@ var KASUN = KASUN || {};
 	var $goTop = $('#go-top');
 	var $coverBox = $('#cover-box');
 	var $tools = $('#tools');
+	var $copyrightIcon = $('#copyright-icon');
+	var $signature = $('#signature');
 
     KASUN.initialize = {
 
@@ -314,13 +316,50 @@ var KASUN = KASUN || {};
 	KASUN.widget = {
 
 		init: function(){
-
+			KASUN.widget.signatureAnimate();
+			KASUN.widget.copyrightIconAnimate();
 		},
 		signatureAnimate: function(){
-
+			let tl = new TimelineMax({onComplete:startAgain});
+			tl.staggerFromTo($signature, 1, {drawSVG:"100%"}, {drawSVG:"50% 50%"}, 0.1);
+			function startAgain() {
+				tl.play("startRepeat");
+			}
 		},
 		socialBottonAnimate: function() {
+			
+		},
+		copyrightIconAnimate: function() {
+			let icon = $copyrightIcon.find('svg');
+			let icons = ["fa-heart", "fa-thumbs-up", "fa-smile"];
+			var select = 0;
+			TweenMax.fromTo(icon, .75, {
+				scale: 0.8,
+			  },
+			{
+				scale: 1,
+				 repeat: -1, /* Aka infinite amount of repeats */
+				 yoyo: true /* Make it go back and forth */
+			});
+			/* setInterval(function(){
+				$(icon).addClass(icons[select]);
+				//$(icon).removeClass(icons[select]);
+				//console.log(icons[select])
+				
+				select++;
+				if (select >= icons.length) {
+					select = 0;
+				}
+			}, 2000); */
+			//icon.each(function(){
 
+			//});
+			
+			/* setTimeout( function(){
+                $(icon).addClass('fa-thumbs-up');
+				$(icon).removeClass('fa-heart');
+				console.log('run anima')
+			}, 5000 ); */
 		}
 
 	};
@@ -343,6 +382,7 @@ var KASUN = KASUN || {};
 		init: function(){
 			KASUN.initialize.init();
 			KASUN.section.init();
+			KASUN.widget.init();
 		},
 
 		windowscroll: function(){
