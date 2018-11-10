@@ -184,6 +184,7 @@ var KASUN = KASUN || {};
 		},
 
 		imageFade: function(){
+
 			$('.image_fade').hover( function(){
 				TweenMax.set($(this),{opacity:0.8});
 				//$(this).filter(':not(:animated)').animate({opacity: 0.8}, 400);
@@ -198,6 +199,7 @@ var KASUN = KASUN || {};
 		},
 
 		lazyLoad: function() {
+			if ("undefined" == typeof LazyLoad) return console.log("lazyLoad: lazyload plugin is missing."), !0;
 			/* var lazyLoadEl = $('[data-lazyload]');
 			if( lazyLoadEl.length > 0 ) {
 				lazyLoadEl.each( function(){
@@ -320,6 +322,7 @@ var KASUN = KASUN || {};
 			KASUN.widget.copyrightIconAnimate();
 		},
 		signatureAnimate: function(){
+			if ("undefined" == typeof TimelineMax) return console.log("signatureAnimate: TimelineMax plugin is missing."), !0;
 			let tl = new TimelineMax({onComplete:startAgain});
 			tl.staggerFromTo($signature, 1, {drawSVG:"100%"}, {drawSVG:"50% 50%"}, 0.1);
 			function startAgain() {
