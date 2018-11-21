@@ -1,6 +1,26 @@
-
 canvas { width: 100%; height: 100% }
-
+ul,
+li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a,
+img {
+    display: block;
+}
+img {
+    border: 0;
+}
+img:not([src]) {
+    visibility: hidden;
+}
+/* Fixes Firefox anomaly during image load */
+@-moz-document url-prefix() {
+    img:-moz-loading {
+        visibility: hidden;
+    }
+}
 h2 {
     font-family: 'Russo One', sans-serif;
 }
@@ -24,6 +44,22 @@ section {
 section:first-child {
     padding-top: inherit;
     margin-top: inherit;
+}
+
+
+#go-top {
+    position: fixed;
+    bottom: 15px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+    display: none;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 1px 9px;
+    font-size: 1.5em;
+    margin: 0;
+    cursor: pointer;
 }
 /*=================================== 
     about section custom style
@@ -71,6 +107,9 @@ footer {
 .footer-widget p {
     font-size: 13px;
 }
+.footer-widget p.brief {
+    margin-top: 10px;
+}
 .footer-widget ul#social {
     text-decoration: none;
 }
@@ -80,7 +119,42 @@ footer {
 .footer-widget ul#social li a svg {
     font-size: 30px;
 }
+.copy-right {
+    font-family: "Archivo Narrow";
+    text-transform: uppercase;
+    font-size: 12px;
+}
 
+:root {
+    --mainColor: #ff9800;
+}
+.footer-widget address a {
+    background: linear-gradient(to bottom, var(--mainColor) 0%, var(--mainColor) 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+    color: #000;
+    text-decoration: none;
+}
+.footer-widget address a:hover {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff9800' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-position: 0 100%;
+    background-size: auto 6px;
+    background-repeat: repeat-x;
+    text-decoration: none;
+}
+
+/*=================================== 
+    nav bar
+=====================================*/
+.navbar .navbar-nav .nav-item .nav-link {
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+}
+
+
+
+  
 /*=================================== 
     owl carousal custom style
 =====================================*/
