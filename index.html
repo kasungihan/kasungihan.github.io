@@ -5,8 +5,120 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kasun Gihan</title>
+    <style>
+        body {
+            background-color: #131313;
+            color: #dcdcdc;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .col {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            flex: 50%;
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+        .flex-left {
+            align-items: flex-start;
+            flex: 60%;
+        }
+        .flex-right {
+            align-items: flex-end;
+            flex: 40%;
+        }
+        
+        .profile-img {
+            width: 25rem;
+            height: 25rem;
+            border: 0.5rem solid #dcdcdc;
+            border-radius: 50%;
+            background-image: url(assets/img/kasun.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-x: -4rem;
+        }
+
+        h1 {
+            margin: 0;
+            font-family: Montserrat;
+            margin-left: 3rem;
+            margin-bottom: 0.5rem;
+            font-size: 4rem;
+            text-transform: uppercase;
+        } 
+        h3 {
+            margin: 0;
+            font-family: MontserratSemi;
+            margin-left: 3rem;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .social-widget  {
+            display: flex;
+            padding: 0;
+            margin-left: 2.5rem;
+        }
+        .social-widget li  {
+            list-style: none;
+            padding: 0.4rem;
+        }
+        .social-widget li > a > img {
+            width: 3em;
+            border-radius: 50%;
+            border: 0.2rem solid #dcdcdc;
+            background-color: #dcdcdc;
+        }
+
+        @font-face {
+            font-family: Montserrat;
+            src: url(assets/fonts/Montserrat-Bold.otf);
+        }
+        @font-face {
+            font-family: MontserratSemi;
+            src: url(assets/fonts/Montserrat-SemiBold.otf);
+        }
+        @media (max-width: 800px) {
+            .flex-left {
+                align-items: center;
+                flex: 100%;
+            }
+            .flex-right {
+                align-items: center;
+                flex: 100%;
+            }
+            .container {
+                flex-direction: column;
+            }
+            h1 {
+                font-size: 3rem;
+            }
+            h3 {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Coming Soon</h1>
+    <div class="container">
+        <div class="col flex-right">
+            <div class="profile-img"></div>
+        </div>
+        <div class="col flex-left">
+                <h1>Kasun Gihan</h1>
+                <h3>Full Stack Web Developer</h3>
+                <ul class="social-widget">
+                    <li><a href="https://www.linkedin.com/in/kasun-gihan/" target="_blank"><img src="assets/img/icons/linkedin.svg" alt="linkedin"></a></li>
+                    <li><a href="https://github.com/kasungihan/" target="_blank"><img src="assets/img/icons/github.svg" alt="github"></a></li>
+                    <li><a href="https://www.facebook.com/kasun.gihan.58" target="_blank"><img src="assets/img/icons/facebook.svg" alt="facebook"></a></li>
+                    <li><a href="https://www.instagram.com/kasun.gihan58/" target="_blank"><img src="assets/img/icons/instagram.svg" alt="instagram"></a></li>
+                    <li><a href="https://twitter.com/Gihan58Kasun" target="_blank"><img src="assets/img/icons/twitter.svg" alt="twitter"></i></a></li>
+                </ul>
+        </div>
+    </div>
 </body>
 </html>
