@@ -18,17 +18,16 @@
             display: flex;
             flex-grow: 1;
             flex-direction: column;
-            flex: 50%;
             flex-wrap: nowrap;
             justify-content: center;
         }
         .flex-left {
-            align-items: flex-start;
-            flex: 60%;
+            flex: 45%;
+            align-items: flex-end;
         }
         .flex-right {
-            align-items: flex-end;
-            flex: 40%;
+            align-items: flex-start;
+            flex: 55%;
         }
         
         .profile-img {
@@ -105,10 +104,10 @@
 </head>
 <body>
     <div class="container">
-        <div class="col flex-right">
+        <div class="col flex-left">
             <div class="profile-img"></div>
         </div>
-        <div class="col flex-left">
+        <div class="col flex-right">
                 <h1>Kasun Gihan</h1>
                 <h3>Full Stack Web Developer</h3>
                 <ul class="social-widget">
