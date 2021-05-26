@@ -1,0 +1,23 @@
+{
+  "name": "kasungihan.github.io",
+  "version": "1.0.0",
+  "description": "official website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kasungihan/kasungihan.github.io.git"
+  },
+  "keywords": [
+    "kasun",
+    "gihan"
+  ],
+  "author": "Kasun Gihan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kasungihan/kasungihan.github.io/issues"
+  },
+  "homepage": "https://github.com/kasungihan/kasungihan.github.io#readme"
+}

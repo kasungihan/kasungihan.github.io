@@ -1,22 +1,14 @@
 # kasungihan.github.io
 
-> my portfolio official website
+> Kasun Gihan Official Website
 
-## Build Setup
+This purpose of showing Kasun's profile to each others.
 
-```bash
-# install dependencies
-$ npm install
+## Design Patterns
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+- HTML Style Guide - [Atomic Design](https://atomicdesign.bradfrost.com/chapter-2/)
+- CSS Style Guide -[Bem Design](http://getbem.com/introduction/)
+- JavaScript Style Guide - [Addy Osmani Design](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+## Credits
 
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
